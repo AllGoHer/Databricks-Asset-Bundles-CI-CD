@@ -77,14 +77,17 @@ Si quiere ver los catalogos que tienes en databricks deberas ejecutar el siguien
 
 Codigo:
 
+        Databricks catalogs list
 
-![image]()
+![image](https://github.com/user-attachments/assets/84e6f1d4-c35c-4c2c-9aec-a42fbf13ab6c)
 
-![image]()
+![image](https://github.com/user-attachments/assets/9f7fd024-3ccb-444e-bf89-95e6cc2f52d4)
 
-![image]()
+Luego iremos a nuestro disco C /usurio/usurio y encontraremos un archivo que se generó automáticamente mediante la autenticación llamado .databrickscfg, el cual, abriremos con VSC y lo editamos eliminando la parte que dice default, solo quedando desde la parte que dice DEV hacia abajo.
 
-![image]()
+![image](https://github.com/user-attachments/assets/e786e102-7a5e-44ff-bcc8-ce15b718f8bf)
+
+![image](https://github.com/user-attachments/assets/1ac97edb-8703-42ee-a452-19e4348406f3)
 
 ![image]()
 
