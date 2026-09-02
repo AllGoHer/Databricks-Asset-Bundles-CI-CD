@@ -202,33 +202,83 @@ packages = ["src/dab"]
 
 
 
-![image]()
+![image](https://github.com/user-attachments/assets/35365fb8-eac6-42bf-b2f6-529ac8f36217)
 
-![image]()
+3. Verifica que src/dab/__init__.py existe
+   
+El archivo __init__.py es obligatorio para que Python reconozca la carpeta como un paquete. Si no existe, créalo:
 
-![image]()
+Powershell:
 
-![image]()
+            # Si no existe, créalo
+            if (!(Test-Path src\dab\__init__.py)) {
+                New-Item src\dab\__init__.py -ItemType File
+            }
 
-![image]()
+4. Ejecuta la construcción localmente para probar
 
-![image]()
+Powershell:
 
-![image]()
+            # Primero, sincroniza las dependencias
+            uv sync --dev
 
-![image]()
+            # Luego, prueba construir el wheel localmente
+            uv build –wheel
 
-![image]()
 
-![image]()
+Si la construcción funciona, deberías ver un archivo .whl en la carpeta dist/.
 
-![image]()
 
-![image]()
+5. Despliega nuevamente
 
-![image]()
+Powershell:
 
-![image]()
+            databricks bundle deploy --target dev
+
+
+Ya ejecutado el comando, podremos ver el archivo .bundle en Databricks.
+
+
+![image](https://github.com/user-attachments/assets/c8400704-7507-4f96-a72d-e4ad259fafd0)
+
+Ingresamos .bundle, luego a dab, ahí encontraremos los siguientes archivos.
+
+![image](https://github.com/user-attachments/assets/ccf6615f-f882-40e2-8474-7029c14f4c34)
+
+Ahora, en Databricks creamos un trabajo.
+
+![image](https://github.com/user-attachments/assets/26b016ee-cfb1-4af9-9b0b-e98e0c827ac5)
+
+![image](https://github.com/user-attachments/assets/5e3911f5-6adb-4a6c-8add-c02fcc614f6e)
+
+![image](https://github.com/user-attachments/assets/9c9bfd3e-016a-44c9-8c7c-8082f70a02cc)
+
+Ahora, colocamos el nombre de la tarea 
+
+Task name: ingestión
+
+Y luego escogemos el path de la siguiente manera.
+
+
+![image](https://github.com/user-attachments/assets/36904293-f7d3-4d54-a8bd-4ff1e53eaaa4)
+
+![image](https://github.com/user-attachments/assets/18755257-6d1b-4a5a-b420-60438dc534f7)
+
+![image](https://github.com/user-attachments/assets/63a0cf73-8b74-4477-bfd4-c105692023af)
+
+![image](https://github.com/user-attachments/assets/60332cf9-5a90-4752-bf40-9bf50f3bd08a)
+
+![image](https://github.com/user-attachments/assets/10328b45-550d-4b34-90e3-3b0612033097)
+
+![image](https://github.com/user-attachments/assets/490f8274-d8fb-4263-b557-fdd082be5882)
+
+Y finalmente le damos click en crear tarea.
+
+![image](https://github.com/user-attachments/assets/a64ff25a-1405-483e-bd4a-d76c065a3092)
+
+Ahora nos vamos a los tres puntitos de la parte superior derecha y selecionamos “edit as YAML”.
+
+![image](https://github.com/user-attachments/assets/b1079613-ab80-4c21-b9ca-4181a86e1941)
 
 ![image]()
 
