@@ -58,6 +58,19 @@ El cual, pedirá una autorización a través de una ventana emergente de databri
 
 ![image](https://github.com/user-attachments/assets/a2553f59-80c7-4ca0-8991-7ccc98a81e88)
 
+<nark>NOTA:</mark> para conocer todos los comandos profile para databricks solo escribe en la termina de VSCode so siguiente.
+
+Bash:
+     
+          Databricks profiles -h
+
+Ahora, veremos Autenticación de perfiles-
+
+Codigo:
+
+        databricks auth profiles
+
+
 ![image]()
 
 ![image]()
