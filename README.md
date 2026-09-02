@@ -25,9 +25,11 @@ Ahora, vamos a conectar VSCode con Databricks.
 
 Vamos a Databricks y, seleccionamos SQL Warehouses
 
-![image]()
+![image](https://github.com/user-attachments/assets/22197f28-3ae1-49e0-989b-4695e0dcd8ab)
 
-![image]()
+Luego hacemos click en severless Starter Warehouse y, en la ventana emergente seleccionamos connection details.
+
+![image](https://github.com/user-attachments/assets/3181732d-1ccb-44fb-a207-83c36c3c0275)
 
 ![image]()
 
