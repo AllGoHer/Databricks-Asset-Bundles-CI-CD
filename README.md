@@ -152,9 +152,55 @@ Ya no estará dentro de Asset_Bundles.
 Ahora, nos vamos a Databricks en workspace y creamos una carpeta PROD.
 
 
-![image]()
+![image](https://github.com/user-attachments/assets/6fdbac48-3e12-4d0a-a285-e05362af1822)
 
-![image]()
+Regresamos a VSC y creamos un archivo llamado notebooks en la carpeta SRC y dentro del notebook1.ipynb
+
+![image](https://github.com/user-attachments/assets/6e4b4d8a-7ce3-4c2a-81cd-029b2c951217)
+
+Código:
+
+       print("Hello World")
+
+Nos vamos a la terminal para desplegar.
+
+Código:
+
+        databricks bundle deploy  --target dev
+
+
+
+NOTA: en caso que al ejecutar da error, aplica el siguiente código en power shell.
+
+1. Ejecutar codigo
+
+Código:
+
+       # Crear la estructura de carpetas
+
+        mkdir src\dab -Force
+
+       # Crear un archivo __init__.py vacío
+        New-Item src\dab\__init__.py -ItemType File
+
+       # Crear un archivo main.py básico
+        @"
+        def main():
+            print("Hello from dab!")
+
+        if __name__ == "__main__":
+            main()
+        "@ | Out-File src\dab\main.py -Encoding UTF8
+
+
+2. Ahora, en tu proyecto en el archivo pyproject.toml agrega esta sección al final del código.
+
+
+[tool.hatch.build.targets.wheel]
+
+packages = ["src/dab"]
+
+
 
 ![image]()
 
