@@ -71,7 +71,12 @@ Codigo:
         databricks auth profiles
 
 
-![image]()
+![image](https://github.com/user-attachments/assets/cea067ca-b1d3-459b-889b-96aa54862498)
+
+Si quiere ver los catalogos que tienes en databricks deberas ejecutar el siguiente codigo.
+
+Codigo:
+
 
 ![image]()
 
