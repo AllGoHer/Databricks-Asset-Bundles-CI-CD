@@ -87,27 +87,70 @@ Luego iremos a nuestro disco C /usurio/usurio y encontraremos un archivo que se 
 
 ![image](https://github.com/user-attachments/assets/e786e102-7a5e-44ff-bcc8-ce15b718f8bf)
 
-![image](https://github.com/user-attachments/assets/1ac97edb-8703-42ee-a452-19e4348406f3)
+![image](https://github.com/user-attachments/assets/97e47787-e162-4e3b-a505-7ab0b26478a9)
 
-![image]()
+Debe quedar así.
 
-![image]()
+![image](https://github.com/user-attachments/assets/cfa5a8b4-9a06-4974-851d-a5cce56fdad0)
 
-![image]()
+Nos vamos a Databricks para crear un catálogo.
 
-![image]()
+![image](https://github.com/user-attachments/assets/d068f2e9-c172-41fb-9473-2628231f790a)
 
-![image]()
+Todos los espacios de trabajo tienen acceso
 
-![image]()
+![image](https://github.com/user-attachments/assets/976d26c5-03ae-4ef0-b765-650eb79a7c98)
 
-![image]()
+Luego, damos click en create -> next -> save.
 
-![image]()
+![image](https://github.com/user-attachments/assets/1a58d9e5-c82c-4233-a7ce-32f47570a88d)
 
-![image]()
+Buscaremos ahora acceso los catalogos de asset_bundles.
 
-![image]()
+Código:
+
+        databricks catalogs get asset_bundle --profile DEV
+
+
+![image](https://github.com/user-attachments/assets/db7896f1-f3e4-4e58-b3b1-69f0aa9233d9)
+
+Ahora, crearemos un esquema
+
+Código:
+
+        Databricks schemas create bronze asset_bundle
+
+
+![image](https://github.com/user-attachments/assets/d78e2d78-7145-4345-81bb-2e6d8247df85)
+
+Comprobamos en Databricks.
+
+![image](https://github.com/user-attachments/assets/519c53a7-6b2c-4dfd-abb8-e084e0dc0f88)
+
+![image](https://github.com/user-attachments/assets/f4159773-3969-4f85-9fdb-19f9df61b80d)
+
+Iniciamos los paquetes de Databricks.
+
+Código:
+
+        Databricks bundle init
+
+Luego, presionamos enter.
+
+
+![image](https://github.com/user-attachments/assets/dfe30297-d9ba-4451-8278-2d94260d9956)
+
+Le asignamos un nombre, en este caso, la abreviación de Databricks asset bundles (dab)
+
+![image](https://github.com/user-attachments/assets/9ab75856-7626-4f6f-85eb-c4194b54e789)
+
+Ya no estará dentro de Asset_Bundles.
+
+
+<mark>NOTA:</mark> si gustas, para tener archivos mas limpios, puedes eliminar el contenido de las carpetas de resources, src y test.
+
+Ahora, nos vamos a Databricks en workspace y creamos una carpeta PROD.
+
 
 ![image]()
 
