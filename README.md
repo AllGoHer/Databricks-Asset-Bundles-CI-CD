@@ -31,17 +31,32 @@ Luego hacemos click en severless Starter Warehouse y, en la ventana emergente se
 
 ![image](https://github.com/user-attachments/assets/3181732d-1ccb-44fb-a207-83c36c3c0275)
 
-![image]()
+Copiamos el server hostname
 
-![image]()
+![image](https://github.com/user-attachments/assets/3d1af169-15c0-468f-be8f-9b3f1709bc4e)
 
-![image]()
+y en la terminal de VSCode escribimos el siguiente código.
 
-![image]()
+código:
 
-![image]()
+        Databricks auth login 
 
-![image]()
+Y al final de ese código pegamos el código del server hostname que copiamos.
+
+
+![image](https://github.com/user-attachments/assets/0e764d31-b673-4908-b77e-a1b8eae9357e)
+
+Luego, escribimos DEV en Databricks profile name [DEFAULT]: 
+
+![image](https://github.com/user-attachments/assets/8d265099-bdaa-41f5-93e9-4870c585cf59)
+
+El cual, pedirá una autorización a través de una ventana emergente de databricks, en el cual, daremos click en autorizar.
+
+![image](https://github.com/user-attachments/assets/e1960c32-d816-4676-bff6-66d81a8b8248)
+
+![image](https://github.com/user-attachments/assets/63203a30-9425-4c50-b8b9-5e00f37c3694)
+
+![image](https://github.com/user-attachments/assets/a2553f59-80c7-4ca0-8991-7ccc98a81e88)
 
 ![image]()
 
