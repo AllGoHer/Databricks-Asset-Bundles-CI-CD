@@ -16,3 +16,7 @@ Luego, abrimos la terminal (ctrl + shift + tab ó crtl ñ) y, probamos que Datab
 Código:
 
         Databricks -v
+
+![image](https://github.com/user-attachments/assets/2b9713d8-02bf-4376-badc-20e5a42aa927)
+
+![image]()
