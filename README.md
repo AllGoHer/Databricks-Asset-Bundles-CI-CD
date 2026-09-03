@@ -418,43 +418,88 @@ Luego, vas a tu GitHub y creas un nuevo repositorio con el nombre de tu convenie
 Ahora, en code copia el http generado.
 
 
-![image]()
+![image](https://github.com/user-attachments/assets/1d7dba08-399b-4930-a4ed-8d639ec5e850)
 
-![image]()
+Luego, lo pegas en el recuadro de la creación del archivo Git de Databricks, y damos click en crear archivo Git.
 
-![image]()
+![image](https://github.com/user-attachments/assets/c07573ed-a9a1-4d63-b995-0e56a6c4c0af)
 
-![image]()
+Ahora, veras generado el archivo en Databricks.
 
-![image]()
+![image](https://github.com/user-attachments/assets/aa15caf7-f923-467b-9ac2-633aa123a034)
 
-![image]()
+Ahora, hacemos click en git.
 
-![image]()
+![image](https://github.com/user-attachments/assets/b5bb8c84-7acd-46ac-802f-11647b0016d5)
 
-![image]()
+Luego creamos una rama característica.
 
-![image]()
+![image](https://github.com/user-attachments/assets/035f8882-84ed-4320-b2fc-3da0b6ba7520)
 
-![image]()
+![image](https://github.com/user-attachments/assets/ebb5ca14-1726-427e-b263-2dc4cb9ece6d)
 
-![image]()
+Si es la primera vez que ejecutas esto, es muy probable que salga este error.
 
-![image]()
+Y solo debes dar click en la url y dar el permiso.
 
-![image]()
 
-![image]()
+![image](https://github.com/user-attachments/assets/3c68cebf-3b88-4933-93b9-8e1eae5a9ddf)
 
-![image]()
+![image](https://github.com/user-attachments/assets/f62afe50-00c0-4606-ba8e-e8f786dfda8f)
 
-![image]()
+![image](https://github.com/user-attachments/assets/1c6f1235-4876-4f21-82e5-f87505c172f9)
 
-![image]()
+![image](https://github.com/user-attachments/assets/fbe7ef21-d90f-4002-8b13-172e51a300fc)
 
-![image]()
+Ahora, regresamos a Databricks y creamos un notebook.
 
-![image]()
+![image](https://github.com/user-attachments/assets/d473aec3-d812-4395-a2d3-415e1896bea7)
+
+Luego de crear el notebook, entramos al servidor y activamos web terminal de la siguiente manera.
+
+![image](https://github.com/user-attachments/assets/495b000f-5702-4290-9a54-bdc863a7f2cd)
+
+![image](https://github.com/user-attachments/assets/00144da8-ae17-485a-8a58-2af243074074)
+
+Ahora, en la terminal tendremos que iniciar el Databricks bundle
+
+Código:
+
+        Databricks bundle init
+
+Luego en la primera consulta damos enter y luego agregamos el nombre del proyecto en este caso dabproject.
+
+
+![image](https://github.com/user-attachments/assets/5bc2559f-57b2-4ba1-8191-b5be84e31d2b)
+
+Para las otras consultas, le damos si o yes a todo solo con presionar enter.
+
+![image](https://github.com/user-attachments/assets/a8fd14b1-8a71-4d13-955e-6fed7719f7d6)
+
+Luego, ingresamos al proyecto creado.
+
+Código:
+
+        cd dabproject
+
+ahora, en los archivos que se creo con el proyecto, vaciamos los archivos de resources porque solo son de ejemplo y no lo necesitamos. Así como también, del archivo src que queden limpios.
+
+Luego, en el archivo Databricks.yml eliminamos los artefactos.
+
+
+![image](https://github.com/user-attachments/assets/77bf8d5f-a7cd-4c7b-bd43-93aff6b76d4f)
+
+En este archivo, fíjate que en include haya los 2 resources o sino tendrás problemas mas adelante. En caso de que no lo tuvieras agrégalo manualmente.
+
+![image](https://github.com/user-attachments/assets/b50b8d3b-55d2-45b2-93bb-35880db75a82)
+
+Ahora, cambiamos el host del deployment. Para ello abrimos un duplicado de la pestaña de Databricks y nos dirigimos a SQL Warehouse y luego a serverless.
+
+![image](https://github.com/user-attachments/assets/d902fd73-5b7a-4e16-9502-2f6c7542ac03)
+
+![image](https://github.com/user-attachments/assets/4a5d916a-98de-438f-bfce-14a65d3a9800)
+
+Aquí copiamos el server hostname y lo pegamos en el host de deployment y production del archivo Databricks.yml 
 
 ![image]()
 
