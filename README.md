@@ -379,25 +379,44 @@ Código:
         databricks bundle deploy --target prod
 
 
-![image]()
+![image](https://github.com/user-attachments/assets/cabf6c18-5e65-4f9c-9eae-d3eb1d7c1638)
 
-![image]()
+Luego, verificamos en Databricks que nuevamente aparezca el job_dab que eliminamos al inicio.
 
-![image]()
+![image](https://github.com/user-attachments/assets/51e2a89f-33d9-47e3-b763-79b91d78ccb0)
 
-![image]()
+![image](https://github.com/user-attachments/assets/77af199d-9f57-448b-8c93-509af75f3c29)
 
-![image]()
+Ahora, en Databricks, nos vamos a la esquina superior derecha en tu logo y hacemis click y, en la ventana emergente seleccionamos setting.
 
-![image]()
+![image](https://github.com/user-attachments/assets/68b314df-8499-4b74-a0b8-59365645f1c1)
 
-![image]()
+Luego, hacemos click en Linked accounts.
 
-![image]()
+![image](https://github.com/user-attachments/assets/845a40a3-7ecf-4db0-a745-baa975261a1e)
 
-![image]()
+Hacemos click en Add Git credencial
 
-![image]()
+![image](https://github.com/user-attachments/assets/52a9bc13-f7dc-40ee-bb36-a5d29bd5ef6e)
+
+Eliminamos la fecha y hora, luego hacemos click en link
+
+![image](https://github.com/user-attachments/assets/dac073ac-bdf4-43cb-86e2-8e35533cfa07)
+
+Luego autorizamos.
+
+![image](https://github.com/user-attachments/assets/a02fba72-4a9b-4cae-972c-e80ef169da32)
+
+![image](https://github.com/user-attachments/assets/1d202bf8-2559-4969-86b4-8d39a167967a)
+
+Ahora, nos vamos a workspace y creamos una carpeta Git.
+
+![image](https://github.com/user-attachments/assets/3067b732-1978-48c7-8e7e-473311376da1)
+
+Luego, vas a tu GitHub y creas un nuevo repositorio con el nombre de tu conveniencia, en mi caso Databricks Asset Bundles CI/CD.
+
+Ahora, en code copia el http generado.
+
 
 ![image]()
 
