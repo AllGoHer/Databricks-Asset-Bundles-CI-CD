@@ -588,33 +588,71 @@ Luego, configuramos los parámetros.
 
 ![image](https://github.com/user-attachments/assets/c2148f13-c600-4f2a-972f-3086f0e061b2)
 
-![image](https://github.com/user-attachments/assets/2bee8716-d8ba-464f-bb4d-67daba1c158a)
 
-![image]()
 
-![image]()
+![image](https://github.com/user-attachments/assets/b061c586-2fc2-4fbb-b446-92fd54e94601)
 
-![image]()
+Y creamos el trabajo (create task) y, cambiamos el nombre el nombre del trabajo general para su mejor identificación.
 
-![image]()
+![image](https://github.com/user-attachments/assets/48b400c7-918d-4e22-82b4-be761953554e)
 
-![image]()
+![image](https://github.com/user-attachments/assets/5552d7dd-307d-46d0-befd-8420a8a54169)
 
-![image]()
+Ahora, nos vamos a la carpeta resources de Databricks y dentro de ella creamos una carpeta llamada Jobs.
 
-![image]()
+![image](https://github.com/user-attachments/assets/76004627-7ce0-488f-8c00-633294a67107)
 
-![image]()
+![image](https://github.com/user-attachments/assets/cc7eb48f-9e5d-4367-818a-34fc37879bc6)
 
-![image]()
+Y dentro de la carpeta Jobs crearemos un file llamado job.yml
 
-![image]()
+![image](https://github.com/user-attachments/assets/0e9ce8e7-2b3c-4d09-a218-cd212b4a46c4)
 
-![image]()
+Luego nos vamos a Jobs & Pipeline al archivo ingestion_ab y luego a task y, copiamos todo el código YML y lo pondremos en el archivo job.yml de Databricks.
 
-![image]()
+![image](https://github.com/user-attachments/assets/d9c24a4c-ffdc-491b-80e8-9f94175ddf52)
 
-![image]()
+![image](https://github.com/user-attachments/assets/885875a6-d1f0-485c-9b4c-1808c6015943)
+
+![image](https://github.com/user-attachments/assets/043c5137-ce78-4118-963f-c73655a74f36)
+
+Código:
+
+        resources:
+         jobs:
+            ingestion_ab:
+              name: ingestion_ab
+              tasks:
+                - task_key: ingestion
+                  notebook_task:
+                    notebook_path: /Workspace/Users/allgoher007@gmail.com/Databricks-Asset-Bundles-CI-CD/dabproject/src/notebooks/ingestion
+                    base_parameters:
+                      catalog_name: asset_bundles
+                    source: WORKSPACE
+              queue:
+                enabled: true
+              performance_target: PERFORMANCE_OPTIMIZED
+
+
+Y luego lo pegamos en job.yml de Databricks 
+
+
+Ahora, editamos el notebook_path, en el cual eliminamos parte de ruta hasta el src y, luego lo cambiaremos a un rumbo relativo.
+
+
+![image](https://github.com/user-attachments/assets/a64d5992-9091-4503-8ecd-072f73611bd2)
+
+Y pondremos ../.. y al final del path o ruta le pondremos  .ipynb
+
+![image](https://github.com/user-attachments/assets/bf738224-8cdd-46ed-b03c-d27262c41754)
+
+Ahora, crearemos una variables ambientales en el archivo Databricks.yml. entonces crearemos una carpeta de variables en resources
+
+![image](https://github.com/user-attachments/assets/069725d9-3750-4b49-a8a5-b082dd2e5154)
+
+![image](https://github.com/user-attachments/assets/1a907b46-3801-454c-b15b-d80de026f0bb)
+
+Ahora, dentro de ella creamos un file llamado variables.yml
 
 ![image]()
 
