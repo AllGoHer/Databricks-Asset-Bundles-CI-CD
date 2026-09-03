@@ -875,7 +875,9 @@ En la ventana emergente, escribimos en el recuadro inferior “bundle developmen
 
 ![image](https://github.com/user-attachments/assets/e3d37663-4098-4794-9632-7dc0fd3d930f)
 
-![image]()
+Luego, te diriges a tu github y veras una rama con feature_allgoher con sus características.
+
+![image](https://github.com/user-attachments/assets/ecee4d84-6815-4dd5-9488-70d326176979)
 
 ![image]()
 
