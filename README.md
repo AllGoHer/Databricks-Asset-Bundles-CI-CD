@@ -729,6 +729,172 @@ Luego, hacemos click en mas + y , creamos el file pipeline.
 
 Y por ultimo hacemos click en Move.
 
+![image](https://github.com/user-attachments/assets/7a937b83-771f-492c-91ca-aa20674b6c23)
+
+Ahora, volvemos a Jobs & Pipelines y seleccionamos demopipeline para obtener el código.
+
+![image](https://github.com/user-attachments/assets/9fff0608-b436-46a3-8c74-74599ca184f8)
+
+Luego, hacemos click en los tres puntitos seleccionamos view setting YML.
+
+![image](https://github.com/user-attachments/assets/678ef425-b8e1-4ee0-b76a-c74b1a43e243)
+
+Ahora, copiamos el código.
+
+![image](https://github.com/user-attachments/assets/3b69b562-bda6-44d5-90b7-748af36c96f3)
+
+Luego, nos vamos a workspace /Databricks-Asset-Bundles-CI-CD/dabproject/Databricks.yml/resources.
+
+![image](https://github.com/user-attachments/assets/9522915b-ba8f-4b61-931f-0c8d075a7a47)
+
+![image](https://github.com/user-attachments/assets/0330bd60-8719-4348-8f59-7f85183f0c02)
+
+Aquí creamos una carpeta llamada pipelines.
+
+![image](https://github.com/user-attachments/assets/1363ceb8-2be7-4cda-8816-a31034b2c286)
+
+Aquí creamos un file llamado demopipeline.yml
+
+![image](https://github.com/user-attachments/assets/8e799950-4ce2-456b-9aec-502bac7f7b87)
+
+![image](https://github.com/user-attachments/assets/faa81a55-0cf5-4f73-b0fc-04c11cbab558)
+
+Y aquí pegamos el código copiado anteriormente.
+
+![image](https://github.com/user-attachments/assets/ad1149a1-ef61-4a58-ab0e-2c1d72aa5a85)
+
+Luego, editamos las rutas del include y root_path para subir de nivel poniendo antes src los dos punto ../..
+
+![image](https://github.com/user-attachments/assets/c57bab30-bf1c-4814-84af-653d66128036)
+
+Ahora, cambiamos el nombre del catalogo por la variable que le asignamos.
+
+![image](https://github.com/user-attachments/assets/ec70a12d-225f-416c-8874-d9d5c7c31398)
+
+Luego, nos vamos Databricks.yml y le agregamos preajustes.
+
+1.	Agregamos el presets.
+   
+2.	Agregamos PROD en el root_path, antes de .bundles
+   
+3.	En permissions cambiamos el user_name por group_name y, el correo personal por admins.
+
+
+![image](https://github.com/user-attachments/assets/55a8c8dc-f631-4e25-b710-c18319357148)
+
+![image](https://github.com/user-attachments/assets/c01403b0-149d-4e02-8308-93c304e34746)
+
+Luego, nos dirigimos a la terminal de Databricks.
+Para ello, vamos primero a compute y encendemos el serverles (esto solo si en caso no aparece la opción web terminal). Luego vamos a workspace/Databricks-Asset-Bundles-CI-CD/notebook (cualquier notebook del entorno). De ahí, nos vamos al punto verde de serverless y, en la ventana emergente damos click enn la flecha lateral de serverless y, en la ventana emergente seleccionamos web terminal y, asi se veras la terminal en la parte inferior de tu archivo Databricks.
+
+
+![image](https://github.com/user-attachments/assets/0194aa84-aa5b-4bac-8b90-fa2363a1d18d)
+
+![image](https://github.com/user-attachments/assets/04e4cba7-82eb-4673-be21-77d9f532c26e)
+
+Ahora, entramos al proyecto.
+
+Código:
+
+        cd dabproject
+
+
+![image](https://github.com/user-attachments/assets/b2f7d69e-9f22-491a-b3c7-d40b290338a9)
+
+Código:
+
+        Databricks bundle validate –target dev
+
+
+![image](https://github.com/user-attachments/assets/9111682d-b946-41c6-a91b-0db1cbe66817)
+
+Código:
+
+        Databricks bundle summary --target dev
+
+
+![image](https://github.com/user-attachments/assets/254d54d8-2152-4315-9b3b-bcaa1d265326)
+
+Código:
+
+        Databricks bundle deploy –target dev
+
+
+![image](https://github.com/user-attachments/assets/01dfc985-1a69-461d-a5a7-423c4a46f98d)
+
+Ahora, verificamos que este nuestro demopipeline e ingestión_ab.
+
+![image](https://github.com/user-attachments/assets/d7e87e16-d60c-4da2-bbda-407ee05b7fb9)
+
+Luego, veremos si tomo el valor predeterminado.
+
+![image](https://github.com/user-attachments/assets/0bfba0df-b716-420d-bc8d-aca66b2d5221)
+
+Ahora, veremos un procedimiento de como anular la variable en el despliegue.
+
+Primero, creamos un catalogo para el producto. 
+
+
+![image](https://github.com/user-attachments/assets/4307af98-c79f-42d7-9a90-6f00bc0fcdb2)
+
+![image](https://github.com/user-attachments/assets/eb07fe4c-afbf-4e97-a814-680ba4adafeb)
+
+Código:
+
+        databricks bundle deploy --target prod --var=”catalog_name=asset_bundles_prod”
+
+
+NOTA: comúnmente sale un error porque el demopipeline ya existe.
+
+
+![image](https://github.com/user-attachments/assets/d8fc3d9a-d16c-4cae-a9d1-7a463e92937f)
+
+Esto permite ver la anulacion de la variable.
+
+![image](https://github.com/user-attachments/assets/134eb33a-44f7-481f-91c5-f9819df4bdba)
+
+Esto buscara destruir la carpeta .bundles
+
+Código:
+
+        Databricks bundle destroy --target prod
+
+
+![image](https://github.com/user-attachments/assets/31ede9be-5215-43d7-a8f3-8b55358c0c83)
+
+NOTA: tener en cuenta que después de destruido ya no se puede revertir.
+
+Ahora, para subir a nuestro git, nos vamos workspace/Databricks-Asset-Bundles-CI-CD y, hacemos click en feature_allgoher.
+
+
+![image](https://github.com/user-attachments/assets/459e34ee-26c3-44ac-9f4a-067978a970fd)
+
+En la ventana emergente, escribimos en el recuadro inferior “bundle development” y, luego le damos en Commit & Push
+
+![image](https://github.com/user-attachments/assets/e7bdcb6b-31f4-4d0f-904a-3e0aebedf300)
+
+![image](https://github.com/user-attachments/assets/e3d37663-4098-4794-9632-7dc0fd3d930f)
+
+![image]()
+
+![image]()
+
+![image]()
+
+![image]()
+
+![image]()
+
+![image]()
+
+![image]()
+
+![image]()
+
+![image]()
+
+![image]()
+
 ![image]()
 
 ![image]()
