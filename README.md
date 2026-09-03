@@ -879,30 +879,48 @@ Luego, te diriges a tu github y veras una rama con feature_allgoher con sus cara
 
 ![image](https://github.com/user-attachments/assets/ecee4d84-6815-4dd5-9488-70d326176979)
 
-![image]()
+Luego, hacemos click en dabproject
 
-![image]()
+![image](https://github.com/user-attachments/assets/faee6a3e-824a-4e40-8072-70d656ab331a)
 
-![image]()
+![image](https://github.com/user-attachments/assets/5e23836c-ed04-43fa-9bc9-fa4fb22d8728)
 
-![image]()
+Pull extraerá todos los datos o cambios del sistema principal remoto.
 
-![image]()
+![image](https://github.com/user-attachments/assets/ce2dd2bf-45bf-48e9-bf6e-1afc0e26c6f7)
 
-![image]()
+![image](https://github.com/user-attachments/assets/8780a7b8-e6d7-47b2-ad95-6b0054a06a72)
 
-![image]()
+![image](https://github.com/user-attachments/assets/13220bbc-8dd1-4dd1-b734-acff7240f1c4)
 
-![image]()
+![image](https://github.com/user-attachments/assets/529b9477-1f09-4926-9f3f-8d8ed45e9023)
 
-![image]()
+De esta forma tu rama principal también estará poblada con esto cambios.
 
-![image]()
+Para verificar nos vamos a nuestra rama principal.
 
-![image]()
 
-![image]()
+![image](https://github.com/user-attachments/assets/f18465c2-3311-4b11-98f0-6d2dbe8311a0)
 
-![image]()
+![image](https://github.com/user-attachments/assets/7079c57e-5ec2-4166-b8d5-53f3f46f3998)
 
-![image]()
+![image](https://github.com/user-attachments/assets/bbafe7d9-3d68-4439-a175-9f969081826b)
+
+Luego, cerramos la ventana (click en la esquina superior derecha).
+
+Ahora, hacemos click en main.
+
+
+![image](https://github.com/user-attachments/assets/d8ee48da-9cef-468d-835e-fef6f8e315a0)
+
+Luego en Pull
+
+![image](https://github.com/user-attachments/assets/ed9d6994-3755-458f-9fbb-df712194b52b)
+
+![image](https://github.com/user-attachments/assets/3ccdae6b-dc37-44c5-933f-c3928c599b05)
+
+Luego, cerramos la ventana
+
+![image](https://github.com/user-attachments/assets/cd9625a3-7a0e-4403-be42-abed8b3adfd0)
+
+
