@@ -280,31 +280,104 @@ Ahora nos vamos a los tres puntitos de la parte superior derecha y selecionamos 
 
 ![image](https://github.com/user-attachments/assets/b1079613-ab80-4c21-b9ca-4181a86e1941)
 
-![image]()
+![image](https://github.com/user-attachments/assets/95823953-2d6b-49e4-921c-42b0967b9e9f)
 
-![image]()
+Ahora, copiamos todo el código y nos dirigimos a VSC
 
-![image]()
+![image](https://github.com/user-attachments/assets/83be5660-ad7c-4851-a270-6edce5707223)
 
-![image]()
+Ahora, nos dirigimos a recursos y creamos una carpeta llamado Jobs y dentro de ella, un archivo llamado job_dab.yml
 
-![image]()
+![image](https://github.com/user-attachments/assets/8a08b8a6-ba0e-4ac2-b19f-d7cb902fd717)
 
-![image]()
+Y guardamos el archivo.
 
-![image]()
+Ahora, en notebook_path borramos parte del valor y lo sustituimos de la siguiente manera.
 
-![image]()
 
-![image]()
+![image](https://github.com/user-attachments/assets/68a2ee48-446e-48e0-8565-f261ec065d47)
 
-![image]()
+![image](https://github.com/user-attachments/assets/5f5b2164-63b6-4261-8a79-e6b9fb9fdbcd)
 
-![image]()
+Bien, ahora nos dirigimos a la terminal y ejecutamos el siguiente código.
 
-![image]()
+Código:
 
-![image]()
+        databricks bundle deploy --target dev
+
+
+ahora, podremos ver en Databricks el archivo de Jobs.
+
+
+![image](https://github.com/user-attachments/assets/fadb9271-7d06-44a6-9aac-af2e7b9216a0)
+
+Editamos esta parte
+
+![image](https://github.com/user-attachments/assets/30efb656-da40-4ad4-87d8-6a50b3fd2bba)
+
+Luego, ejecutamos en la terminal el siguiente código.
+
+Código: 
+
+        databricks bundle deploy --target dev
+
+
+![image](https://github.com/user-attachments/assets/52b7ab31-e233-431b-bedc-d4949e15cd03)
+
+Ahora, crearemos un cuderno más en src\notebooks.
+
+Notebook2
+
+Codigo:
+
+        print('Hello World')
+        print('This is a sample Python script.')
+
+
+![image](https://github.com/user-attachments/assets/26f7e955-0791-4c28-a68d-6bf20015edfd)
+
+Luego, en la terminal ejecutamos el deployment.
+
+Código:
+
+        databricks bundle deploy --target dev
+
+
+![image](https://github.com/user-attachments/assets/5236a6a2-6218-406c-959b-c2835fa6be4d)
+
+Ahora, vamos a Jobs & Pipelines y eliminamos el job_dab.
+
+Luego, regresamos a la terminal 
+
+Código:
+
+        databricks bundle summary --target prod
+
+
+código:
+
+       databricks bundle validate --target prod
+
+
+![image](https://github.com/user-attachments/assets/1ea0c9fb-34c4-4125-bc7a-814827bac837)
+
+Código:
+
+       databricks bundle prod --target prod
+
+
+![image](https://github.com/user-attachments/assets/47111d36-854d-4e5a-8a07-8dc1be405c22)
+
+**Ojo:** antes de ejecutar deploy verifica que en tu archivo Databricks.yml  en la parte de incluide estén estos dos recursos.
+
+![image](https://github.com/user-attachments/assets/2ffabf84-11ce-4263-9289-cc3909ffb782)
+
+Luego ejecuta el siguiente código.
+
+Código:
+
+        databricks bundle deploy --target prod
+
 
 ![image]()
 
