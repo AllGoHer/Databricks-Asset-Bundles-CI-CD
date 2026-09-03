@@ -501,39 +501,94 @@ Ahora, cambiamos el host del deployment. Para ello abrimos un duplicado de la pe
 
 Aquí copiamos el server hostname y lo pegamos en el host de deployment y production del archivo Databricks.yml 
 
-![image]()
+![image](https://github.com/user-attachments/assets/1d478b61-2aa7-457a-9a0a-d185032373b5)
 
-![image]()
+Luego, hacemos click aquí.
 
-![image]()
+![image](https://github.com/user-attachments/assets/81bb3e6b-26a6-4aa0-86c8-813137a9b26b)
 
-![image]()
+Ahora, nos vamos a la carpeta src y creamos una carpeta llamado notebooks
 
-![image]()
+![image](https://github.com/user-attachments/assets/b292f2a9-756c-4e90-810a-f6e8b0cc76c2)
 
-![image]()
+Y dentro de ella creamos un cuaderno o notebook llamado ingestión.
 
-![image]()
+![image](https://github.com/user-attachments/assets/7d280784-fc14-40ff-a0c6-b7fa9c1eb9c5)
 
-![image]()
+Probamos si todo marcha bien y ejecutamos la siguiente consulta.
 
-![image]()
+Sql:
 
-![image]()
+     SELECT * FROM asset_bundles.information_schema.columns
 
-![image]()
 
-![image]()
+![image](https://github.com/user-attachments/assets/a2bdfa07-5bed-43a8-87c3-6f90e87a9403)
 
-![image]()
+Haremos ahora una estructura dinámica y la creación de una arquitectura medallón.
 
-![image]()
+Código:
 
-![image]()
+        dbutils.widgets.text(‘catalog_name’, ‘ ’)
 
-![image]()
+ahí veras como genera un recuadro llamado catalog_name en la parte superior.
 
-![image]()
+
+![image](https://github.com/user-attachments/assets/37aaefeb-7182-4f2b-9f09-1281a82b5f94)
+
+Luego, creamos otra línea de código abajo con el siguiente código y ejecutamos.
+
+Código:
+
+        catalog_name = dbutils.widgets.get('catalog_name')
+
+
+![image](https://github.com/user-attachments/assets/c303c757-73c3-4cb5-9ac3-92fa6e8cc84f)
+
+Luego, con el siguiente código haremos un llamado de forma dinámica al catálogo asste_bundles.
+
+Código:
+
+        spark.sql(f'SELECT * FROM {catalog_name}.information_schema.columns')
+
+
+![image](https://github.com/user-attachments/assets/7d1962d4-bbbf-4e42-8ec1-301879a93ffe)
+
+Luego ejecutamos.
+
+![image](https://github.com/user-attachments/assets/93e5c041-e4cd-475d-8643-17a7bfd6ad4c)
+
+Y ahora los almacenamos en un dataframe.
+
+Código:
+
+        df = spark.sql(f'SELECT * FROM {catalog_name}.information_schema.columns')
+        display(df)
+
+
+![image](https://github.com/user-attachments/assets/6e7210ef-c4d8-4ba1-be78-bae485780d35)
+
+Ahora, crearemos un trabajo (Job).
+
+![image](https://github.com/user-attachments/assets/496bd9d1-6b7f-4e9c-a409-476f41618515)
+
+![image](https://github.com/user-attachments/assets/baed9c8a-0598-4669-a309-7e10e5529fce)
+
+Al notebook lo llamamos ingestión y luego ubicamos su ruta(path)
+
+![image](https://github.com/user-attachments/assets/c6670008-085e-44e4-ac4b-941b0a11e546)
+
+![image](https://github.com/user-attachments/assets/49fc5f76-ca2e-479e-b9d8-ebd5ffaba01a)
+
+![image](https://github.com/user-attachments/assets/0a06006f-70f0-4ee8-a247-74b64ea3d81e)
+
+Y confirmamos.
+
+Luego, configuramos los parámetros.
+
+
+![image](https://github.com/user-attachments/assets/c2148f13-c600-4f2a-972f-3086f0e061b2)
+
+![image](https://github.com/user-attachments/assets/2bee8716-d8ba-464f-bb4d-67daba1c158a)
 
 ![image]()
 
