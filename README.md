@@ -654,37 +654,80 @@ Ahora, crearemos una variables ambientales en el archivo Databricks.yml. entonce
 
 Ahora, dentro de ella creamos un file llamado variables.yml
 
-![image]()
+![image](https://github.com/user-attachments/assets/8ffedbbe-8749-4fd2-93d2-ff045c79bff1)
 
-![image]()
+![image](https://github.com/user-attachments/assets/35772d44-d638-41ec-8db4-7fd62d469e2b)
 
-![image]()
+Y pasamos el siguiente código.
 
-![image]()
+Código:
 
-![image]()
+        variables:
+          catalog_name:
+            default: asset_bundles
 
-![image]()
+luego, modificamos el archivo job.yml para que acepte las variables.
 
-![image]()
+Cambiamos esto:
 
-![image]()
 
-![image]()
+![image](https://github.com/user-attachments/assets/8c975217-7976-4921-9fa4-be8170d30627)
 
-![image]()
+Por esto:
 
-![image]()
+![image](https://github.com/user-attachments/assets/89a4698b-2eb1-4769-98ff-2c62be8ec4f4)
 
-![image]()
+De esta manera, cambiamos las variables ambientales.
 
-![image]()
+Ahora veremos las tablas delta, si requieres mas información, en tu navegador buscar tablas deltas o declarative pipelines que es lo más moderno.
 
-![image]()
+Para comenzar, nos vamos a Jobs & Pipelines y creamos un ETL pipeline.
 
-![image]()
 
-![image]()
+![image](https://github.com/user-attachments/assets/dfed8d85-8507-4cd5-849f-71a5423dcc8d)
+
+Luego configuramos el catalogo y el esquema de la siguiente manera.
+
+![image](https://github.com/user-attachments/assets/b306eec0-5698-4ca0-af4c-4ed975a4bcaf)
+
+Cambiamos el nombre del ETL principal por demopipeline y, luego pasamos el siguiente código.
+
+Código:
+
+        import dlt
+
+        @dlt.table
+        def transformed():
+            return spark.range(10)
+
+y luego ejecutamos en seco (Run Dry)
+
+
+![image](https://github.com/user-attachments/assets/0357fb67-39d7-4c2d-b6d3-bcc1744d573e)
+
+![image](https://github.com/user-attachments/assets/58a91004-b3a1-4563-9c16-cb9a9a5a5141)
+
+![image](https://github.com/user-attachments/assets/aa24b93e-0df3-458b-8155-80efd76c3bf2)
+
+Ahora, moveremos la carpeta raíz a los usuarios
+
+![image](https://github.com/user-attachments/assets/a2999f3f-855d-47e8-9f5a-ee6df0c7618d)
+
+![image](https://github.com/user-attachments/assets/762ce207-c90a-464f-ad16-ccaca239afcb)
+
+![image](https://github.com/user-attachments/assets/04c8ea0f-2056-4e8d-8202-4fa75ebb92fd)
+
+![image](https://github.com/user-attachments/assets/609529e7-6d7a-4c42-9748-69f17f709d42)
+
+![image](https://github.com/user-attachments/assets/b2f7d7f4-b5e7-4150-966d-8405d022086a)
+
+![image](https://github.com/user-attachments/assets/f0c3c498-9921-4b4d-8b24-32aceabb1ad3)
+
+Luego, hacemos click en mas + y , creamos el file pipeline.
+
+![image](https://github.com/user-attachments/assets/915db958-73fb-491d-bc5f-eced8aeaab71)
+
+Y por ultimo hacemos click en Move.
 
 ![image]()
 
